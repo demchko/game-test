@@ -100,6 +100,7 @@ export const MainGameComp = ({ isRolling, playerPosition, lastRollPosition, dice
 
                     const isPlayerHere = playerPosition === currentCell.id;
                     const isLastRoll = lastRollPosition === currentCell.id;
+                    const tooltipPosition = getTooltipPosition(row, col);
 
                     return (
                         <div className="relative">
@@ -129,7 +130,7 @@ export const MainGameComp = ({ isRolling, playerPosition, lastRollPosition, dice
 
                             {/* Tooltip */}
                             {hoveredCell === currentCell.id && (
-                                <CellTooltip styles={getTooltipClasses(getTooltipPosition)} currentCell={currentCell} isPlayerHere={isPlayerHere} />
+                                <CellTooltip styles={getTooltipClasses(tooltipPosition)} currentCell={currentCell} isPlayerHere={isPlayerHere} />
                             )}
                         </div>
                     );
