@@ -7,7 +7,6 @@ export const Header = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
 
-    // Close dropdown when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -25,11 +24,6 @@ export const Header = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
 
-    const handleMenuItemClick = (action) => {
-        console.log(`Clicked: ${action}`);
-        setIsDropdownOpen(false);
-        // Add your menu item logic here
-    };
     return (
         <div className="w-full flex justify-between items-center mb-4 sm:mb-6 lg:mb-8 gap-2 sm:gap-4 lg:gap-10">
             <button className='w-16 sm:w-20 lg:w-[100px] text-white flex items-center justify-center sm:justify-start gap-1 sm:gap-2 p-2 rounded-xl sm:rounded-2xl bg-white bg-opacity-20 text-xs sm:text-sm lg:text-sm transition-all duration-200 hover:bg-opacity-30'>
@@ -58,7 +52,6 @@ export const Header = () => {
                         </div>
 
                         <button
-                            onClick={() => handleMenuItemClick('profile')}
                             className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                         >
                             <User className="w-4 h-4" />
@@ -66,7 +59,6 @@ export const Header = () => {
                         </button>
 
                         <button
-                            onClick={() => handleMenuItemClick('settings')}
                             className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                         >
                             <Settings className="w-4 h-4" />
@@ -74,7 +66,6 @@ export const Header = () => {
                         </button>
 
                         <button
-                            onClick={() => handleMenuItemClick('help')}
                             className="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
                         >
                             <HelpCircle className="w-4 h-4" />
@@ -83,7 +74,6 @@ export const Header = () => {
 
                         <div className="border-t border-gray-100 mt-2 pt-2">
                             <button
-                                onClick={() => handleMenuItemClick('logout')}
                                 className="w-full flex items-center gap-3 px-4 py-2 text-sm bg-red-700 rounded-xl text-white hover:bg-red-800 transition-colors"
                             >
                                 <LogOut className="w-4 h-4" />

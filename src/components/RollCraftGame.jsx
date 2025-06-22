@@ -45,7 +45,7 @@ const RollCraftGame = () => {
             const newPosition = (playerPosition + finalDiceValue) % cellConfig.length;
             setPlayerPosition(newPosition);
             setLastRollPosition(newPosition);
-            setIsRolling(false); // End rolling animation here
+            setIsRolling(false);
 
             const reward = cellConfig[newPosition];
             setCurrentReward(reward);

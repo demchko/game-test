@@ -56,7 +56,6 @@ export const RewardPopup = ({ currentReward }) => {
                 <div className={`absolute inset-0 bg-gradient-to-r ${getRewardTypeColor(currentReward?.type)} rounded-3xl blur-xl opacity-60 scale-110`} />
 
                 <div className={`relative bg-gradient-to-br ${getRewardTypeColor(currentReward?.type)} text-white rounded-3xl shadow-2xl border-4 border-white/30 overflow-hidden`}>
-                    {/* Header with icon */}
                     <div className="relative pt-8 pb-4 px-8">
                         <motion.div
                             variants={floatingVariants}
