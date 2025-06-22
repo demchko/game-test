@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 export const MainCenterDice = ({ col, row, isRolling, imgSrc }) => {
     return (
         <div
-            // key={index}
             className="aspect-square flex items-center justify-center col-span-2 row-span-2"
             style={{ gridColumnStart: col + 1, gridRowStart: row + 1 }}
         >
